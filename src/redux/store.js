@@ -14,6 +14,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
   contacts: persistReducer(persistConfig, contactReducer),
   filters: filterReducer,
+  loading: false,
+  error: null
 });
 
 export const store = configureStore({
